@@ -18,5 +18,6 @@ group :test do
 end
   
 group :production do
+  gem 'dm-postgres-adapter'
   gem 'pg'
 end
