@@ -1,0 +1,8 @@
+vendor/bundle
+vendor/bin
+
+.bundle/
+
+.ruby-version
+
+*.sqlite3

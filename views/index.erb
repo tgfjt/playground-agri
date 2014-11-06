@@ -1,0 +1,17 @@
+<table>
+  <tr>
+    <th>No.</th>
+    <th>Temperature</th>
+    <th>Humidity</th>
+    <th>&nbsp;</th>
+  </tr>
+<% @agris.each do |agri| %>
+  <tr>
+    <td><%= agri.id %></td>
+    <td><%= agri.temp %></td>
+    <td><%= agri.hum %></td>
+    <td><%= agri.created_at %></td>
+    <td><a href="/remove/<%= agri.id %>">remove</a></td>
+  </tr>
+<% end %>
+</table>
