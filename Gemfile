@@ -5,11 +5,11 @@ ruby '2.1.2'
 gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-core'
-gem 'dm-sqlite-adapter'
 
 group :test, :development do
   gem 'rspec'
-  gem 'sqlite3', groups: %w(test development), require: false
+  gem 'dm-sqlite-adapter'
+  gem 'sqlite3'
 end
 
 group :test do
