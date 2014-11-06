@@ -6,8 +6,9 @@ gem 'sinatra'
 gem 'data_mapper'
 gem 'dm-core'
 
+gem 'rspec'
+
 group :test, :development do
-  gem 'rspec'
   gem 'dm-sqlite-adapter'
   gem 'sqlite3'
 end
