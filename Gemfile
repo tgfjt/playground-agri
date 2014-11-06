@@ -9,7 +9,7 @@ gem 'dm-sqlite-adapter'
 
 group :test, :development do
   gem 'rspec'
-  gem 'sqlite3'
+  gem 'sqlite3', groups: %w(test development), require: false
 end
 
 group :test do
