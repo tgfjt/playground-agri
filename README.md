@@ -2,6 +2,8 @@
 
 Just a playground.
 
+![image](ss.png)
+
 ## Usage
 
 ### Install
@@ -16,7 +18,7 @@ bundle install --path=vendor/bundle
 bundle exec rake db:set
 ```
 
-### Run
+### Run App
 
 ```
 bundle exec rackup
@@ -25,5 +27,5 @@ bundle exec rackup
 ### Test
 
 ```
-bundle exec rspec
+bundle exec rake specs
 ```
