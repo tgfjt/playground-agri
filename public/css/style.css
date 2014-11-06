@@ -1,0 +1,70 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+div, ul {
+	padding: 0;
+}
+
+svg {
+	font: 12px Hiragino;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	stroke: #000;
+	shape-rendering: crispEdges;
+}
+
+.x.axis path {
+	display: none;
+}
+
+.line0 {
+	fill: none;
+	stroke: rgba(235, 30, 30, 0.7);
+	stroke-width: 3px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.line1 {
+	fill: none;
+	stroke: rgba(30, 30, 235, 0.7);
+	stroke-width: 3px;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+}
+
+.circle0, .circle1 {
+	cursor: pointer;
+}
+
+#tooltip {
+	position: absolute;
+	top: 40px;
+	left: 80px;
+	display: none;
+	width: 160px;
+	padding: 10px;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+	z-index: 10000;
+}
+
+#tooltip li {
+	list-style-type: none;
+	margin: 5px;
+	font-size: 14px;
+}
+
+#temp {
+	color: rgba(235, 30, 30, 0.7);
+}
+
+#humid {
+	color: rgba(30, 30, 235, 0.7);
+}

@@ -20,13 +20,21 @@ class AgriApp < Sinatra::Base
   set :root, File.dirname(__FILE__)
 
   get '/' do
+    erb :index
+  end
+
+  get '/all' do
+    content_type :json
+
     @agris = Agri.all(
       order: [:id.desc],
       limit: 10
     )
-    erb :index
+
+    @agris.to_json
   end
 
+  # health check ping
   get '/status' do
     status 200
     body 'Status: 200'
@@ -45,6 +53,18 @@ class AgriApp < Sinatra::Base
     )
 
     erb :create
+  end
+
+  post '/create/?' do
+    content_type :json
+
+    @agri = Agri.create(
+      temp: params[:temp],
+      hum: params[:hum],
+      created_at: Time.now
+    )
+
+    @agri.to_json
   end
 
   get '/remove/:id' do
